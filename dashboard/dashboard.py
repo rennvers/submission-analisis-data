@@ -93,10 +93,8 @@ day_df.sort_values("dteday", inplace=True)
 day_df.reset_index(drop=True, inplace=True)
 
 with st.sidebar:
-    st.markdown(
-        "<h2 style='text-align: center; font-size: 20px;'>Bike Sharing Dashboard</h1>",
-        unsafe_allow_html=True
-    )
+    st.image("https://cdn-icons-png.flaticon.com/512/2972/2972185.png", width=120)
+    st.title("Bike Sharing Dashboard")
 
 # Filter data
 
@@ -127,7 +125,7 @@ usertype_df     = create_usertype_df(main_day_df)
 weekday_df      = create_weekday_df(main_day_df)
 time_segment_df = create_time_segment_df(main_hour_df)
 
-st.header("Bike Sharing Dashboard 🚲")
+st.header("Bike Sharing Dashboard")
 
 # plot statistik utama
 st.subheader("Statistik Utama")
