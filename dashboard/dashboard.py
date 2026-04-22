@@ -7,7 +7,7 @@ sns.set(style='dark')
 # Helper function yang dibutuhkan untuk menyiapkan berbagai dataframe
 
 def create_monthly_df(df):
-    monthly_df = df.resample(rule='M', on='dteday').agg({
+    monthly_df = df.resample(rule='ME', on='dteday').agg({
         "instant": "nunique",
         "cnt": "sum"
     })
